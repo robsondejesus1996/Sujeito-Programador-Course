@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Formularios</h1>
+  <form>
+    <label for="pnome">Primeiro nome:</label>
+    <input type="text" id="pnome" name="pnome" placeholder="Informe o seu primeiro nome" required> <br/> <br/>
+
+    <label for="unome">Ultimo nome</label>
+    <input type="text" id="unome" name="unome" placeholder="Informe o ultimo nome" required/> <br/> <br/>
+
+    <label>
+      <strong>Qual seu nivel como programador atualmente?</strong>
+    </label><br> 
+    <label>
+      <input type="radio" name="nivel" value="iniciante"/>Sou Iniciante
+    </label>
+    <label>
+      <input type="radio" name="nivel" value="medio"/>Comecei a pouco tempo
+    </label>
+
+    <label>
+      <input checked type="radio" name="nivel" value="Avançado"/> Sou Avançado
+    </label> <br> <br>
+
+
+    <label for="escolaridade">
+      <strong>Sua escolaridade</strong>
+    </label>
+    <select id="escolaridade" required>
+      <option selected disabled value="">Selecione</option>
+      <option>Educacao Basica</option>
+      <option>Ensino medio</option>
+      <option>Ensino superior</option>
+      <option>Pos graduado</option>
+    </select> <br><br>
+
+    <label>
+      <strong>selecione as tecnologias que vc conhece</strong>
+    </label>
+    <br><br>
+    
+    <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML"/>
+    <label for="tecnologia1">HTML</label>
+
+    <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS"/>
+    <label for="tecnologia2">CSS</label>
+
+    <input type="checkbox" id="tecnologia3" name="tecnologia3" value="Java Script"/>
+    <label for="tecnologia3">JS</label>
+
+    <input type="checkbox" id="tecnologia4" name="tecnologia4" value="Angular"/>
+    <label for="tecnologia4">Angular JS</label>
+
+    <br> <br>
+    <input type="submit" value="Cadastrar"/>
+  </form>
+
+  
+  
+</body>
+</html>
