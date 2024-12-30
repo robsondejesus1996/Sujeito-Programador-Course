@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Trabalhando com videos</h1>
+
+  <video poster="images/filhote-capa.jpg.jpg" width="420" height="340" controls loop muted autoplay>
+    <source src="video/video.mp4" type="video/mp4">
+  </video>
+
+  <h1>Tagg detail e Summry</h1>
+
+  <details open>
+    <summary>Motor 1.0</summary>
+    <p>O carro possui um motor 1.0</p>
+  </details>
+
+  <details>
+    <summary>Conforto</summary>
+    <p>tem 4 bancos</p>
+  </details>
+
+  <details>
+    <summary>Preco</summary>
+    <p>12X de 1000,00 Reais</p>
+  </details>
+
+
+  <h1>DataList</h1>
+  <form>
+    <input list="carros" name="carro" placeholder="digite nome carro.">
+    <datalist id="carros">
+        <option value="gol 1.0"></option>
+        <option value="polo 1.4"></option>
+        <option value="audi 2.5"></option>
+    </datalist>
+  </form>
+
+  </body>
+</html>
