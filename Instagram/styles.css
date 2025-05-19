@@ -92,3 +92,131 @@ input[type="password"]:focus, input[type="text"]:focus{
   border: 1px solid #a1a1a1;
 }
 
+input[type="submit"]{
+  width: 320px;
+  margin-top: 10px;
+  height: 30px;
+  border: 0;
+  background-color: #3c96ed;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.infobox{
+  background-color: transparent;
+  height: 6opx;
+  border: 1px solid rgb(236, 234, 234);
+  margin: 10px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infobox p {
+  color: #ffffff;
+  user-select: none;
+}
+
+.infobox p a{
+  font-weight: bold;
+  user-select: none;
+}
+
+.get-app-panel{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.app-buttons{
+  margin-top: 16px;
+
+
+}
+
+.app-buttons img{
+  height: 40px;
+  padding: 0 2px;
+}
+
+footer{
+  text-align: center;
+  height: 50px;
+  margin-top: -50px;
+}
+
+
+footer a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.text-small{
+  font-size: 12px;
+  font-weight: bold;
+  color: grey;
+  text-transform: uppercase;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+
+#container-signup{
+  margin: 0 auto;
+  min-height: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.message{
+  margin: 10px 70px;
+}
+
+.message span{
+  color: #8e8e8e;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.cta-button{
+  width: 320px;
+  margin: 10px 0;
+  height: 35px;
+  background-color: #3c96ed;
+  color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.divisor-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.line {
+  height: 1px;
+  background-color: #ececec;
+  width: 35%;
+}
+
+.divisor-tag{
+  font-weight: bold;
+  margin: 0 2.5%;
+  color: #8e8e8e;
+  user-select: none;
+}
