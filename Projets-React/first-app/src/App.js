@@ -1,28 +1,44 @@
-import {useState} from "react";
-
-import {Nome} from "./components/nome";
+import { useState, useEffect } from "react";
 
 function App() {
-  const [aluno, setAluno] = useState("Sujeito Programador");
+  const [input, setInput] = useState("");
 
-  function handleChangeName(nome) {
-    setAluno(nome)
+  const [tarefas, setTarefas] = useState(() => {
+    const tarefasStorage = localStorage.getItem('@tarefa');
+    return tarefasStorage ? JSON.parse(tarefasStorage) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('@tarefa', JSON.stringify(tarefas));
+  }, [tarefas]);
+
+  function handleRegistrar(e) {
+    e.preventDefault();
+
+    if (input.trim() === "") return;
+
+    setTarefas([...tarefas, input]);
+    setInput("");
   }
 
   return (
     <div className="container">
-      <h1>Component APP</h1><br />
-      <h2>Olá {aluno}</h2>
-      <button onClick={() => handleChangeName("Robson de Jesus")}>
-        Mudar Nome
-      </button>
-      {/* <Nome aluno="Robson de Jesus" idade={29}/> */}
-     
+      <h1>Cadastrando tarefas</h1>
+      <form onSubmit={handleRegistrar}>
+        <label>Nome da tarefa:</label><br />
+        <input placeholder="Digite uma tarefa" value={input} onChange={(e) => setInput(e.target.value)} /><br />
+        <button type="submit">Registrar</button>
+      </form>
+
+      <br />
+
+      <ul>
+        {tarefas.map((tarefa, index) => (
+          <li key={index}>{tarefa}</li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 export default App;
-
-
-
