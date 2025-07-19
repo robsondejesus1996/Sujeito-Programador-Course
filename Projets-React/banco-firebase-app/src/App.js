@@ -11,7 +11,7 @@ import {
   setDoc,
   updateDoc,
 } from "firebase/firestore";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth"
 import "./style.css";
 
 function App() {
@@ -43,6 +43,26 @@ function App() {
     }
     loadPosts();
   });
+
+  useEffect(() => {
+    async function checkLogin(){
+      onAuthStateChanged(auth, (user) => {
+        if(user){
+          console.log(user);
+          setUser(true);
+          setUserDetails({
+            uid: user.uid, 
+            email: user.email,
+          })
+        }else {
+          setUser(false);
+          setUserDetails({});
+        }
+      })
+    }
+
+    checkLogin();
+  }, [])
 
 
   //  useEffect(() => {
