@@ -1,0 +1,10 @@
+"use strict";
+let valor1 = 1;
+let valor2;
+valor2 = 3;
+let valor3;
+valor3 = '2';
+// valor1 = 20; 
+console.log(valor1);
+console.log(valor2);
+console.log(valor1 + valor2 + valor3);
