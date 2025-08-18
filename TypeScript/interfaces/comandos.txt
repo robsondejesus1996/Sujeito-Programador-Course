@@ -1,0 +1,2 @@
+tsc --init // para gerar as configurações
+tsc --watch // ficar sempre buildando
